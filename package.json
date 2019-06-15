@@ -2,7 +2,6 @@
   "name": "v-element-ripple",
   "author": "Jacob Gibellini",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name ripple 'src/ripple.js'",
