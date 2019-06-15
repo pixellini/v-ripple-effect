@@ -26,11 +26,11 @@ Ripple can be applied onto an element by using "v-ripple".
 
 ## Examples
 ```html
-<div v-ripple={ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }></div>
+<div v-ripple="{ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }"></div>
 ```
 
 ```html
-<button v-ripple={ time: 0.3, ease: 'linear', color: 'rgb(255, 255, 255)' }></button>
+<button v-ripple="{ time: 0.3, ease: 'linear', color: 'rgb(255, 255, 255)' }"></button>
 ```
 ## Demo
 https://codepen.io/jacobgibellini/pen/mZVGPJ
