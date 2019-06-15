@@ -20,16 +20,16 @@ Ripple can be applied onto an element by using "v-ripple".
 
 #### Basic usage example:
 
-```vue
+```html
 <div class="my-class" v-ripple></div>
 ```
 
 ## Other Examples
-```vue
+```html
 <div v-ripple={ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }></div>
 ```
 
-```vue
+```html
 <button v-ripple={ time: 0.3, ease: 'linear', color: 'rgb(255, 255, 255)' }></button>
 ```
 ## Demo
