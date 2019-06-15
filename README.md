@@ -1,9 +1,9 @@
-# v-element-ripple
+# v-custom-ripple
 A ripple effect (like from Material UI or Vuetify) that can be applied to any element.
 
 ## Installation
 ```
-npm install v-element-ripple
+npm i v-custom-ripple
 ```
 
 ## Options
@@ -32,3 +32,5 @@ Ripple can be applied onto an element by using "v-ripple".
 ```vue
 <button v-ripple={ time: 0.3, ease: 'linear', color: 'rgb(255, 255, 255)' }></button>
 ```
+## Demo
+https://codepen.io/jacobgibellini/pen/mZVGPJ
