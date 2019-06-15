@@ -1,5 +1,5 @@
 # v-custom-ripple
-A ripple effect (like from Material UI or Vuetify) that can be applied to any element using a Vue.js directive.
+A Vue directive that creates a ripple effect on any element (like from Material UI or Vuetify).
 
 ## Installation
 ```
