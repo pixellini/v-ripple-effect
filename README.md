@@ -1,15 +1,15 @@
-# v-custom-ripple
-A Vue directive that creates a ripple effect on any element (like from Material UI or Vuetify).
+# v-wave
+A Vue directive that creates a wave/ripple effect on any element (like from Material UI or Vuetify).
 
 ## Installation
 ```
-npm i v-custom-ripple
+npm i v-wave
 ```
 In your main.js file:
 ```javascript
-import ripple from 'v-custom-ripple';
+import wave from 'v-wave';
 
-Vue.use(ripple);
+Vue.use(wave);
 ```
 
 ## Options
@@ -22,21 +22,21 @@ Vue.use(ripple);
 | startingOpacity  | The opacity the ripple will start with when the animation begins.  | Float (0 to 1)  |  0.2 |
 
 ## Usage
-Ripple can be applied onto an element by using "v-ripple".
+Ripple can be applied onto an element by using "v-wave".
 
 #### Basic usage example:
 
 ```html
-<div class="my-class" v-ripple></div>
+<div class="my-class" v-wave></div>
 ```
 
 ## Examples
 ```html
-<div v-ripple="{ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }"></div>
+<div v-wave="{ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }"></div>
 ```
 
 ```html
-<button v-ripple="{ time: 0.3, ease: 'linear', color: 'rgb(255, 255, 255)' }"></button>
+<button v-wave="{ time: 0.3, ease: 'linear', color: 'rgb(255, 255, 255)' }"></button>
 ```
 ## Demo
 https://codepen.io/jacobgibellini/pen/mZVGPJ
