@@ -7,8 +7,9 @@ npm install v-element-ripple
 ```
 
 ## Options
+
 |  Property |  Description | Type  | Default  |
-|---|---|---|---|---|
+|-----------|--------------|-------|----------|
 | time  | The number of seconds for the ripple to complete its animation.  | Number or Float  | 1  |
 |  ease |  The easing function of the ripple. | String  |  'ease' |
 | color  |  The color of the ripple. | String  |  '#000' |
@@ -19,7 +20,7 @@ Ripple can be applied onto an element by using "v-ripple".
 
 ####Basic usage example:
 
-```
+```vue
 <div class="my-class" v-ripple></div>
 ```
 
@@ -28,10 +29,10 @@ Ripple can be applied onto an element by using "v-ripple".
 
 example
 
-```
-<div  v-ripple={ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }></div>
+```vue
+<div v-ripple={ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }></div>
 ```
 
-```
+```vue
 <button v-ripple={ time: 0.3, ease: 'linear', color: 'rgb(255, 255, 255)' }></button>
 ```
