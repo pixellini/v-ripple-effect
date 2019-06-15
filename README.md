@@ -24,7 +24,7 @@ Ripple can be applied onto an element by using "v-ripple".
 <div class="my-class" v-ripple></div>
 ```
 
-## Other Examples
+## Examples
 ```html
 <div v-ripple={ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }></div>
 ```
