@@ -1,5 +1,5 @@
 {
-  "name": "v-custom-ripple",
+  "name": "v-ripple-effect",
   "author": "Jacob Gibellini",
   "version": "1.0.0",
   "main": "./dist/ripple.umd.js",
