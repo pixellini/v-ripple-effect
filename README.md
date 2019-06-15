@@ -5,11 +5,17 @@ A Vue directive that creates a ripple effect on any element (like from Material 
 ```
 npm i v-ripple-effect
 ```
-In your main.js file:
-```javascript
-import ripple from 'v-ripple-effect';
 
+Registering the directive in Vue:
+```javascript
+// Global Instance - in your main.js file
+import ripple from 'v-ripple-effect';
 Vue.use(ripple);
+
+// Single Instance
+new Vue({
+  directives: { ripple }
+})
 ```
 
 ## Options
