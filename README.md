@@ -5,6 +5,12 @@ A ripple effect (like from Material UI or Vuetify) that can be applied to any el
 ```
 npm i v-custom-ripple
 ```
+In your main.js file:
+```javascript
+import ripple from 'v-custom-ripple';
+
+Vue.use(ripple);
+```
 
 ## Options
 
