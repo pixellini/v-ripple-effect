@@ -25,10 +25,6 @@ Ripple can be applied onto an element by using "v-ripple".
 ```
 
 ## Other Examples
-Ripple can be applied onto an element by using "v-ripple".
-
-example
-
 ```vue
 <div v-ripple={ time: 1.2, ease: 'ease-in', color: '#ff0000', startingOpacity: 0.5 }></div>
 ```
