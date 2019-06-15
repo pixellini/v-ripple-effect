@@ -154,11 +154,17 @@ if (typeof window !== 'undefined') {
 /* harmony default export */ var setPublicPath = (null);
 
 // CONCATENATED MODULE: ./src/directive-ripple.js
-// Constants
-// const RIPPLE_CLASS = 'ripple';
-var ripple = function ripple(el, binding, vnode) {
-  var ELEMENT_SIZE_TIME_TOGGLE = 300; //px
+var ripple = function ripple(el, binding) {
+  var _ref = binding.value || {},
+      time = _ref.time,
+      ease = _ref.ease,
+      color = _ref.color,
+      startingOpacity = _ref.startingOpacity;
 
+  var TIME = time || 0.8;
+  var EASE = ease || 'ease';
+  var BACKGROUND = color || '#000';
+  var STARTING_OPACITY = startingOpacity || 0.2;
   /**
    * @description
    * A container element to hold the ripple element.
@@ -182,18 +188,18 @@ var ripple = function ripple(el, binding, vnode) {
    */
 
 
-  var createRippleElement = function createRippleElement(x, y, time) {
+  var createRippleElement = function createRippleElement(x, y) {
     var element = document.createElement('div');
     element.style.position = 'absolute';
     element.style.borderRadius = '50%';
     element.style.left = x + 'px';
     element.style.top = y + 'px';
     element.style.transform = 'translate(-50%, -50%)';
-    element.style.backgroundColor = '#000';
+    element.style.backgroundColor = BACKGROUND;
     element.style.height = 0;
     element.style.width = 0;
-    element.style.opacity = 0.2;
-    element.style.transition = "all ".concat(time, "s ease");
+    element.style.opacity = STARTING_OPACITY;
+    element.style.transition = "all ".concat(TIME, "s ").concat(EASE);
     return element;
   };
   /**
@@ -205,10 +211,8 @@ var ripple = function ripple(el, binding, vnode) {
 
 
   var rippleAnimation = function rippleAnimation(element, x, y, size) {
-    var time = size > ELEMENT_SIZE_TIME_TOGGLE ? 2 : 1; // seconds
-
     var container = createContainerElement();
-    var ripple = createRippleElement(x, y, time);
+    var ripple = createRippleElement(x, y);
     element.appendChild(container);
     container.appendChild(ripple); // Add the styles to cause the ripple effect.
 
@@ -217,11 +221,11 @@ var ripple = function ripple(el, binding, vnode) {
       ripple.style.height = newSize;
       ripple.style.width = newSize;
       ripple.style.opacity = 0;
-    }, 30); // Delete the node from the DOM.
+    }, 40); // Delete the node from the DOM.
 
     setTimeout(function () {
       element.removeChild(container);
-    }, time * 1000);
+    }, TIME * 1000);
   };
   /**
    * @description
@@ -236,7 +240,6 @@ var ripple = function ripple(el, binding, vnode) {
       target = target.parentElement;
     }
 
-    console.log(e);
     var width = target.clientWidth;
     var height = target.clientHeight;
     var size = height > width ? height : width;
