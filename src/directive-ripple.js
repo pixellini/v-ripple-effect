@@ -1,9 +1,9 @@
-// Constants
-// const RIPPLE_CLASS = 'ripple';
-
-
-const ripple = (el, binding, vnode) => {
-        const ELEMENT_SIZE_TIME_TOGGLE = 300; //px
+const ripple = (el, binding) => {
+        const { time, ease, color, startingOpacity } = binding.value || {};
+        const TIME = time || 0.8;
+        const EASE = ease || 'ease';
+        const BACKGROUND = color || '#000';
+        const STARTING_OPACITY = startingOpacity || 0.2;
 
         /**
          * @description
@@ -26,18 +26,18 @@ const ripple = (el, binding, vnode) => {
          * @description
          * Creates the element that will be the ripple effect.
          */
-        const createRippleElement = (x, y, time) => {
+        const createRippleElement = (x, y) => {
             const element = document.createElement('div');
             element.style.position = 'absolute';
             element.style.borderRadius = '50%';
             element.style.left = x + 'px';
             element.style.top = y + 'px';
             element.style.transform = 'translate(-50%, -50%)';
-            element.style.backgroundColor = '#000';
+            element.style.backgroundColor = BACKGROUND;
             element.style.height = 0;
             element.style.width = 0;
-            element.style.opacity = 0.2;
-            element.style.transition = `all ${ time }s ease`;
+            element.style.opacity = STARTING_OPACITY;
+            element.style.transition = `all ${ TIME }s ${ EASE }`;
             return element;
         }
 
@@ -48,10 +48,8 @@ const ripple = (el, binding, vnode) => {
          * to begin the animation and then remove it once it's done animating.
          */
         const rippleAnimation = (element, x, y, size) => {
-            const time = size > ELEMENT_SIZE_TIME_TOGGLE ? 2 : 1; // seconds
-
             const container = createContainerElement();
-            const ripple = createRippleElement(x, y, time);
+            const ripple = createRippleElement(x, y);
 
             element.appendChild(container); 
             container.appendChild(ripple);
@@ -62,12 +60,12 @@ const ripple = (el, binding, vnode) => {
                 ripple.style.height = newSize;
                 ripple.style.width = newSize;
                 ripple.style.opacity = 0;
-            }, 30)
+            }, 40)
 
             // Delete the node from the DOM.
             setTimeout(() => {
                 element.removeChild(container);
-            }, time * 1000)
+            }, TIME * 1000)
         }
 
         /**
@@ -81,7 +79,6 @@ const ripple = (el, binding, vnode) => {
                 target = target.parentElement;
             }
             
-            console.log(e);
             const width = target.clientWidth;
             const height = target.clientHeight;
             const size = height > width ? height : width;
