@@ -2,6 +2,7 @@
   "name": "v-custom-ripple",
   "author": "Jacob Gibellini",
   "version": "1.0.0",
+  "main": "./dist/ripple.umd.js",
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name ripple 'src/ripple.js'",
