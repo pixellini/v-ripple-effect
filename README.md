@@ -33,7 +33,7 @@ Ripple can be applied onto an element by using "v-ripple".
 #### Basic usage example:
 
 ```html
-<div class="my-class" v-ripple></div>
+<div v-ripple></div>
 ```
 
 ## Examples

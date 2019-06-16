@@ -1,7 +1,7 @@
 {
   "name": "v-ripple-effect",
   "author": "Jacob Gibellini",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "./dist/ripple.umd.js",
   "license": "MIT",
   "repository": {
