@@ -8,6 +8,18 @@
     "type": "git",
     "url": "https://github.com/jacobgibellini/v-ripple-effect"
   },
+  "keywords": [
+      "Vue",
+      "vue.js",
+      "directive",
+      "ripple",
+      "wave",
+      "effect",
+      "animation",
+      "material ripple",
+      "v-ripple",
+      "vue-ripple"
+  ],
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name ripple 'src/ripple.js'",
